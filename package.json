@@ -1,0 +1,16 @@
+{
+  "name": "@fnando/eslint-config-codestyle",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jest": "*",
+    "eslint-plugin-prettier": "*"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*"
+  }
+}

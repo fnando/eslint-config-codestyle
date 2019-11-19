@@ -64,7 +64,7 @@ module.exports = {
     "react/react-in-jsx-scope": "error",
     "react/require-render-return": "error",
     "react/self-closing-comp": "error",
-    "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+    "react/jsx-first-prop-new-line": "off",
     "react/jsx-equals-spacing": ["error", "never"],
     "react/jsx-indent": ["error", 2],
     "react/no-array-index-key": "off",

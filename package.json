@@ -3,14 +3,14 @@
   "version": "0.0.3",
   "license": "MIT",
   "dependencies": {
-    "eslint-plugin-import": "*",
-    "eslint-plugin-jest": "*",
-    "eslint-plugin-prettier": "*"
-  },
-  "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jest": "*",
+    "eslint-plugin-prettier": "*",
     "eslint-plugin-react": "*",
-    "eslint-plugin-react-hooks": "*"
+    "eslint-plugin-react-hooks": "*",
+    "prettier": "*"
   }
 }

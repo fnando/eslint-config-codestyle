@@ -21,6 +21,7 @@ module.exports = {
       plugins: ["@typescript-eslint"],
       files: "**/*.{ts,tsx}",
       rules: {
+        "react/prop-types": "off",
         "react/jsx-filename-extension": ["error", { extensions: ["tsx"] }],
         "@typescript-eslint/consistent-type-assertions": "warn",
         "@typescript-eslint/no-array-constructor": "error",

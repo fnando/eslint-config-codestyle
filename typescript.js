@@ -1,4 +1,10 @@
 const path = require("path");
+const pkg = require(`${process.cwd()}/package.json`);
+const usesReact = pkg.dependencies.react || pkg.devDependencies.react;
+
+const reactRules = {
+  "react/jsx-filename-extension": ["error", { extensions: ["tsx"] }],
+};
 
 module.exports = {
   overrides: [
@@ -21,8 +27,8 @@ module.exports = {
       plugins: ["@typescript-eslint"],
       files: "**/*.{ts,tsx}",
       rules: {
+        ...(usesReact ? reactRules : {}),
         "react/prop-types": "off",
-        "react/jsx-filename-extension": ["error", { extensions: ["tsx"] }],
         "@typescript-eslint/consistent-type-assertions": "warn",
         "@typescript-eslint/no-array-constructor": "error",
         "@typescript-eslint/no-namespace": "error",
@@ -44,7 +50,7 @@ module.exports = {
           },
         ],
         "@typescript-eslint/no-useless-constructor": "error",
-      }
-    }
-  ]
+      },
+    },
+  ],
 }

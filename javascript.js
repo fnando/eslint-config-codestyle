@@ -28,13 +28,13 @@ module.exports = {
   ],
   plugins: ["import", "jest"],
   rules: {
-    "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": "off",
+    "class-methods-use-this": "off",
     "import/first": "warn",
     "import/order": "warn",
 
+    "import/no-extraneous-dependencies": "error",
     "arrow-body-style": ["warn", "as-needed"],
-    "class-methods-use-this": "warn",
     "linebreak-style": ["error", "unix"],
     "lines-between-class-members": ["error", "always"],
     "no-array-constructor": "error",

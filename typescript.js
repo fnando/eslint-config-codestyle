@@ -10,9 +10,6 @@ module.exports = {
   overrides: [
     {
       parser: "@typescript-eslint/parser",
-      parserOptions: {
-        project: path.join(process.cwd(), "tsconfig.json")
-      },
       extends: [
         "plugin:import/typescript",
         "plugin:@typescript-eslint/recommended",
@@ -30,6 +27,7 @@ module.exports = {
         ...(usesReact ? reactRules : {}),
         "react/prop-types": "off",
         "@typescript-eslint/consistent-type-assertions": "warn",
+        "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-array-constructor": "error",
         "@typescript-eslint/no-namespace": "error",
         "@typescript-eslint/no-var-requires": "error",

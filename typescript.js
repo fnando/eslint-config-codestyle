@@ -1,6 +1,7 @@
 const path = require("path");
 const pkg = require(`${process.cwd()}/package.json`);
-const usesReact = pkg.dependencies.react || pkg.devDependencies.react;
+const usesReact = (pkg.dependencies && pkg.dependencies.react) ||
+                  (pkg.devDependencies && pkg.devDependencies.react);
 
 const reactRules = {
   "react/jsx-filename-extension": ["error", { extensions: ["tsx"] }],
@@ -26,6 +27,7 @@ module.exports = {
       rules: {
         ...(usesReact ? reactRules : {}),
         "react/prop-types": "off",
+        "import/named": "off",
         "@typescript-eslint/consistent-type-assertions": "warn",
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-array-constructor": "error",

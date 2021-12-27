@@ -3,6 +3,7 @@
   "version": "0.0.7",
   "license": "MIT",
   "dependencies": {
+    "@fnando/eslint-plugin-consistent-import": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "eslint-config-prettier": "*",

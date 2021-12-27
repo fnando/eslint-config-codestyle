@@ -1,3 +1,8 @@
+const packageJson = require(process.cwd() + "/package.json");
+const jestSupport = Boolean(
+  packageJson.devDependencies.jest || packageJson.dependencies.jest,
+);
+
 module.exports = {
   env: {
     browser: true,
@@ -14,19 +19,22 @@ module.exports = {
     "eslint:recommended",
     "plugin:prettier/recommended",
     "plugin:import/recommended",
-    "plugin:jest/recommended"
-  ],
+    "plugin:@fnando/consistent-import/recommended",
+    jestSupport ? "plugin:jest/recommended" : null,
+  ].filter(Boolean),
   overrides: [
     {
-      files: [
-        "**/*.test.{js,jsx,ts,tsx}"
-      ],
+      files: ["**/*.test.{js,jsx,ts,tsx}"],
       env: {
-        jest: true
+        jest: true,
       },
-    }
+    },
   ],
-  plugins: ["import", "jest"],
+  plugins: [
+    "import",
+    "@fnando/consistent-import",
+    jestSupport ? "jest" : null,
+  ].filter(Boolean),
   rules: {
     "import/no-unresolved": "off",
     "class-methods-use-this": "off",
@@ -46,10 +54,10 @@ module.exports = {
     "no-unused-vars": "error",
     "no-use-before-define": "warn",
     "no-useless-constructor": "error",
-    "object-shorthand": ["error", "always", { "avoidQuotes": true }],
+    "object-shorthand": ["error", "always", { avoidQuotes: true }],
     "prefer-const": "warn",
     "prefer-destructuring": "error",
     "require-await": "error",
     "valid-jsdoc": ["warn"],
-  }
+  },
 };

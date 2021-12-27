@@ -4,9 +4,7 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: [
-    "plugin:import/typescript",
-  ],
+  extends: ["plugin:import/typescript"],
   plugins: ["react", "react-hooks"],
   settings: {
     "import/resolver": {
@@ -223,7 +221,7 @@ module.exports = {
             ignoreDOMComponents: true,
           },
         ],
-      }
-    }
-  ]
-}
+      },
+    },
+  ],
+};

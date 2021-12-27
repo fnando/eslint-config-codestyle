@@ -1,8 +1,6 @@
 const path = require("path");
 const pkg = require(`${process.cwd()}/package.json`);
-const usesReact =
-  (pkg.dependencies && pkg.dependencies.react) ||
-  (pkg.devDependencies && pkg.devDependencies.react);
+const usesReact = pkg.dependencies?.react || pkg.devDependencies?.react;
 
 const reactRules = {
   "react/jsx-filename-extension": ["error", { extensions: ["tsx"] }],

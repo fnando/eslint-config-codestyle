@@ -1,6 +1,6 @@
 const packageJson = require(process.cwd() + "/package.json");
 const jestSupport = Boolean(
-  packageJson.devDependencies.jest || packageJson.dependencies.jest,
+  packageJson.devDependencies?.jest || packageJson.dependencies?.jest,
 );
 
 module.exports = {

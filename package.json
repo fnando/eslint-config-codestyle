@@ -1,11 +1,12 @@
 {
   "name": "@fnando/eslint-config-codestyle",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "MIT",
   "dependencies": {
     "@fnando/eslint-plugin-consistent-import": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "eslint": "*",
     "eslint-config-prettier": "*",
     "eslint-plugin-import": "*",
     "eslint-plugin-jest": "*",

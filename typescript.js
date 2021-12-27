@@ -6,6 +6,7 @@ const usesReact =
 
 const reactRules = {
   "react/jsx-filename-extension": ["error", { extensions: ["tsx"] }],
+  "react/prop-types": "off",
 };
 
 module.exports = {
@@ -27,7 +28,6 @@ module.exports = {
       files: "**/*.{ts,tsx}",
       rules: {
         ...(usesReact ? reactRules : {}),
-        "react/prop-types": "off",
         "import/named": "off",
         "@typescript-eslint/consistent-type-assertions": "warn",
         "@typescript-eslint/no-explicit-any": "error",

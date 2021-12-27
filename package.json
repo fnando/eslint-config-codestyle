@@ -1,6 +1,6 @@
 {
   "name": "@fnando/eslint-config-codestyle",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "dependencies": {
     "@fnando/eslint-plugin-consistent-import": "*",

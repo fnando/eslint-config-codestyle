@@ -55,7 +55,7 @@ module.exports = {
     "no-use-before-define": "warn",
     "no-useless-constructor": "error",
     "object-shorthand": ["error", "always", { avoidQuotes: true }],
-    "prefer-const": "warn",
+    "prefer-const": ["error", { destructuring: "all" }],
     "prefer-destructuring": "error",
     "require-await": "error",
     "valid-jsdoc": ["warn"],
